@@ -39,4 +39,4 @@ singularity-args: "-B /g:/g -B /scratch:/scratch"
 reason: True
 # show-failed-logs: True
 printshellcmds: True
-cluster-cancel: "scancel"
+# cluster-cancel: "scancel"
