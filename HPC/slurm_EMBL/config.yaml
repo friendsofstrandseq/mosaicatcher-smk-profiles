@@ -30,5 +30,6 @@ keep-going: True
 # scheduler: greedy
 
 use-conda: true
-# conda-frontend: "conda"
-use-singularity: false
+conda-frontend: "conda"
+use-singularity: true
+singularity-args: "-B /g:/g -B /scratch:/scratch"
