@@ -40,4 +40,3 @@ reason: True
 show-failed-logs: True
 printshellcmds: True
 cluster-cancel: "scancel"
-cluster-sidecar: "slurm-sidecar.py"
