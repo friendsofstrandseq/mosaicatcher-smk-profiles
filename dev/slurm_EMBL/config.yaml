@@ -35,7 +35,7 @@ use-singularity: true
 singularity-args: "-B /g:/g -B /scratch:/scratch"
 
 # DEV
-cluster-status: ".status-sacct.sh"
+cluster-status: "status-sacct.sh"
 reason: True
 show-failed-logs: True
 printshellcmds: True
