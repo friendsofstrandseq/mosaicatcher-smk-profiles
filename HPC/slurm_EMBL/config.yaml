@@ -32,4 +32,4 @@ keep-going: True
 use-conda: true
 conda-frontend: "conda"
 use-singularity: true
-singularity-args: "-B /g:/g -B /scratch:/scratch"
+singularity-args: "-B /g:/g,/scratch:/scratch"
