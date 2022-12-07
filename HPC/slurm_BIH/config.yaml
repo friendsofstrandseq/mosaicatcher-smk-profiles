@@ -39,8 +39,8 @@ local-cores: 1
 latency-wait: 60
 jobs: 200
 
-# 5 attempts to restart to correspond to the progressive memory increase solving OOM
-restart-times: 5
+# 4 attempts to restart to correspond to the progressive memory increase solving OOM
+restart-times: 4
 keep-going: True
 # rerun-incomplete: True
 # scheduler: greedy

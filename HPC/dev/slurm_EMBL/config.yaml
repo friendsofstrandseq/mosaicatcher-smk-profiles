@@ -21,22 +21,15 @@ max-jobs-per-second: 100
 max-status-checks-per-second: 100
 local-cores: 1
 latency-wait: 60
-jobs: 400
+jobs: 200
 
-# 6 attempts to restart to correspond to the progressive memory increase solving OOM
-restart-times: 6
+# 5 attempts to restart to correspond to the progressive memory increase solving OOM
+restart-times: 4
 keep-going: True
 # rerun-incomplete: True
 # scheduler: greedy
 
 use-conda: true
 conda-frontend: "conda"
-use-singularity: true
-singularity-args: "-B /g:/g -B /scratch:/scratch"
-
-# DEV
-# cluster-status: "status-sacct.sh"
-reason: True
-# show-failed-logs: True
-printshellcmds: True
-# cluster-cancel: "scancel"
+use-singularity: false
+# singularity-args: "-B /g:/g,/scratch:/scratch"
