@@ -2,8 +2,8 @@
 cluster:
   mkdir -p logs/{rule} errors/{rule} &&
   bsub -J smk-{rule}-{wildcards}
-  -o logs/{rule}/%j.out 
-  -e errors/{rule}/%j.error 
+  -o logs/{rule}/%J.out 
+  -e errors/{rule}/%J.error 
   -n {threads}
   -R "span[hosts=1]" 
   -W {resources.time} 
@@ -12,7 +12,7 @@ cluster:
 # Default ressources for all rules
 default-resources:
   - mem_mb=1000
-  - time="00:30:00"
+  - time="00:30"
   # - partition=#TOCHANGE
 
 max-jobs-per-second: 100
