@@ -9,6 +9,7 @@ cluster: mkdir -p logs/{rule} errors/{rule} &&
   --output=logs/{rule}/%j.out
   --error=errors/{rule}/%j.error
   --time={resources.time}
+  --constraint={resources.constraint}
 
 # Default ressources for all rules
 default-resources:
