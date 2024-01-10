@@ -9,6 +9,7 @@ cluster: mkdir -p logs/{rule} errors/{rule} &&
   --output=logs/{rule}/%j.out
   --error=errors/{rule}/%j.error
   --time={resources.time}
+  --constraint={resources.constraint}
 
 # Default ressources for all rules
 default-resources:
@@ -18,9 +19,9 @@ default-resources:
   - time="00:30:00"
   - constraint=""
 
-# set-resources:
-#   ashleys_mark_duplicates:
-#     partition: "bigmem"
+set-resources:
+  ashleys_mark_duplicates:
+    constraint: "milan\\|rome"
 
 max-jobs-per-second: 100
 max-status-checks-per-second: 100
