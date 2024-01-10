@@ -11,17 +11,18 @@ cluster: mkdir -p logs/{rule} errors/{rule} &&
   --time={resources.time}
   --constraint={resources.constraint}
 
+# slurm: True
+
 # Default ressources for all rules
 default-resources:
+  # - slurm_account=korbel
+  # - slurm_partition=htc
   - partition=htc
   - qos=normal
   - mem_mb=1000
-  - time="00:30:00"
+  - time="01:00:00"
   - constraint=""
-
-set-resources:
-  ashleys_mark_duplicates:
-    constraint: "milan\\|rome"
+  # - runtime=60
 
 max-jobs-per-second: 100
 max-status-checks-per-second: 100
@@ -32,10 +33,10 @@ jobs: 200
 # 5 attempts to restart to correspond to the progressive memory increase solving OOM
 restart-times: 5
 keep-going: True
-# rerun-incomplete: True
-# scheduler: greedy
+rerun-incomplete: True
+scheduler: greedy
 
 use-conda: true
 conda-frontend: "conda"
-use-singularity: true
-singularity-args: "-B /g:/g,/scratch:/scratch"
+use-singularity: false
+# singularity-args: "-B /g:/g,/scratch:/scratch"
