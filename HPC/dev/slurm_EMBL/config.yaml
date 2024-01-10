@@ -11,6 +11,7 @@ cluster: mkdir -p logs/{rule} errors/{rule} &&
   --time={resources.time}
   --constraint={resources.constraint}
 
+
 # Default ressources for all rules
 default-resources:
   - partition=htc
@@ -22,6 +23,7 @@ default-resources:
 set-resources:
   ashleys_mark_duplicates:
     constraint: "milan\\|rome"
+
 
 max-jobs-per-second: 100
 max-status-checks-per-second: 100
