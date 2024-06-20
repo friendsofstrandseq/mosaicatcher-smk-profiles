@@ -20,9 +20,13 @@ default-resources:
   - partition=htc
   - qos=normal
   - mem_mb=1000
-  - time="01:00:00"
+  # - time="01:00:00"
   - constraint=""
-  # - runtime=60
+  - time=60
+
+set-resources:
+  ashleys_mark_duplicates:
+    constraint: "milan\\|rome"
 
 max-jobs-per-second: 100
 max-status-checks-per-second: 100
@@ -31,7 +35,7 @@ latency-wait: 60
 jobs: 200
 
 # 5 attempts to restart to correspond to the progressive memory increase solving OOM
-restart-times: 5
+restart-times: 4
 keep-going: True
 rerun-incomplete: True
 scheduler: greedy
