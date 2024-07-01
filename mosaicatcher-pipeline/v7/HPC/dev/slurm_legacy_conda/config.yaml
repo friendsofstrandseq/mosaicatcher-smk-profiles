@@ -11,22 +11,17 @@ cluster: mkdir -p logs/{rule} errors/{rule} &&
   --time={resources.time}
   --constraint={resources.constraint}
 
-# slurm: True
-
 # Default ressources for all rules
 default-resources:
-  # - slurm_account=korbel
-  # - slurm_partition=htc
   - partition=htc
   - qos=normal
   - mem_mb=1000
   - time="01:00:00"
   - constraint=""
-  # - time=60
 
 set-resources:
   ashleys_mark_duplicates:
-    constraint: "milan\\|rome"
+    constraint: "rome"
 
 max-jobs-per-second: 100
 max-status-checks-per-second: 100
