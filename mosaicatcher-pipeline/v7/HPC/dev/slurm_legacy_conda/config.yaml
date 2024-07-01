@@ -20,9 +20,9 @@ default-resources:
   - partition=htc
   - qos=normal
   - mem_mb=1000
-  # - time="01:00:00"
+  - time="01:00:00"
   - constraint=""
-  - time=60
+  # - time=60
 
 set-resources:
   ashleys_mark_duplicates:
