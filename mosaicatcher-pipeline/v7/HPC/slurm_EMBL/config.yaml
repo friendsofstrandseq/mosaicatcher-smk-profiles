@@ -17,6 +17,7 @@ default-resources:
   - qos=normal
   - mem_mb=1000
   - time="00:30:00"
+  # - time="00:30:00"
   - constraint=""
 
 set-resources:
